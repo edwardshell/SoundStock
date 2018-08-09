@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "../Grid";
 import Nav from "../Navbar/Nav";
+import API from "../../utils/API";
 
 export class ArtistSignUp extends Component {
   state = {
@@ -40,7 +41,7 @@ export class ArtistSignUp extends Component {
         <Nav />
         <Container fluid>
           <Row>
-            <Col size="6">
+            <Col size="md-3">
               <form>
                 <div className="form-group">
                   <label for="name">Name</label>
@@ -48,7 +49,7 @@ export class ArtistSignUp extends Component {
                     type="email"
                     className="form-control"
                     aria-describedby="emailHelp"
-                    placeholder="Enter email"
+                    placeholder="Name"
                   />
                 </div>
                 <div className="form-group">
@@ -93,9 +94,17 @@ export class ArtistSignUp extends Component {
                     placeholder="Song"
                   />
                 </div>
+                <div className="form-group">
+                <label htmlFor="">Artist bio</label>
+                <textarea className="form-control" name="bio" id="" cols="50" rows="5"></textarea>
+                </div>
+                <div className="form-group">
+                <label htmlFor="">Description of investment opportunity</label>
+                <textarea className="form-control" name="description" id="" cols="50" rows="5" placeholder="I'm selling 10% of all future publishing for $50 per share out of 100 shares"></textarea>
+                </div>
                 <br />
 
-                <button type="submit" className="btn btn-primary">
+                <button type="submit" className="btn btn-info">
                   Submit
                 </button>
                

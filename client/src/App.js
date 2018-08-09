@@ -3,8 +3,10 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import logo from "./logo.svg";
 import "./App.css";
 import HomeContainer from "./components/HomeContainer"
-import {ArtistSignUp} from "./components/Pages/ArtistSignUp"
-import {InvestorSignUp} from "./components/Pages/InvestorSignUp"
+import ArtistSignUp from "./components/Pages/ArtistSignUp"
+import InvestorSignUp from "./components/Pages/InvestorSignUp"
+import ArtistProfile from "./components/Pages/ArtistProfile"
+import InvestorProfile from "./components/Pages/InvestorProfile"
 
 
 class App extends Component {
@@ -16,6 +18,9 @@ class App extends Component {
           <Route exact path="/" component={HomeContainer} />
           <Route exact path="/artistSignUp" component={ArtistSignUp} />
           <Route exact path="/investorSignUp" component={InvestorSignUp} />
+          {/* we may need to create separate sign in btns */}
+          <Route exact path="/artistProfile" component={ArtistProfile} />
+          <Route exact path="/investorProfile" component={InvestorProfile} />
         </Switch>
       </div>
     </Router>
