@@ -40,7 +40,9 @@ export class ArtistSignUp extends Component {
         <Nav />
         <Container fluid>
           <Row>
-            <Col size="6">
+            <Col size="md-3" />
+            <Col size="md-6">
+            <br />
               <form>
                 <div className="form-group">
                   <label for="name">Name</label>
@@ -93,15 +95,35 @@ export class ArtistSignUp extends Component {
                     placeholder="Song"
                   />
                 </div>
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1">
+                    Bio
+                  </label>
+                  <textarea
+                    class="form-control"
+                    id="exampleFormControlTextarea1"
+                    rows="3"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1">
+                    Investment info
+                  </label>
+                  <textarea
+                    class="form-control"
+                    id="exampleFormControlTextarea1"
+                    rows="3"
+                  />
+                </div>
                 <br />
 
                 <button type="submit" className="btn btn-primary">
                   Submit
                 </button>
-               
               </form>
               <br />
             </Col>
+            <Col size="md-3" />
           </Row>
         </Container>
       </div>
