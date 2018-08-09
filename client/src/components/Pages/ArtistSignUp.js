@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Container, Row, Col } from "../Grid";
 import Nav from "../Navbar/Nav";
 import API from "../../utils/API";
+import "./artist.css";
+
 
 export class ArtistSignUp extends Component {
   state = {
@@ -37,7 +39,7 @@ export class ArtistSignUp extends Component {
 
   render() {
     return (
-      <div>
+       <div>
         <Nav />
         <Container fluid>
           <Row>
@@ -122,7 +124,6 @@ export class ArtistSignUp extends Component {
                   Submit
                 </button>
               </form>
-
               <br />
             </Col>
             <Col size="md-3" />
