@@ -39,15 +39,13 @@ export class ArtistSignUp extends Component {
 
   render() {
     return (
-      <div>
+       <div>
         <Nav />
         <Container fluid>
           <Row>
-
-            <Col size="md-10">
-            <div className="form-artist">
-            <p className="h4 text-center mb-4">Sign up</p>
-
+            <Col size="md-3" />
+            <Col size="md-6">
+            <br />
               <form>
                 <div className="form-group">
                   <label for="name">Name</label>
@@ -55,7 +53,7 @@ export class ArtistSignUp extends Component {
                     type="email"
                     className="form-control"
                     aria-describedby="emailHelp"
-                    placeholder="Name"
+                    placeholder="Enter email"
                   />
                 </div>
                 <div className="form-group">
@@ -67,76 +65,68 @@ export class ArtistSignUp extends Component {
                     placeholder="Enter email"
                   />
                 </div>
-            <Col size="6">
-              <br />
-                <form>
-                  <div className="form-group">
-                    <label for="name">Name</label>
-                    <input
-                      type="email"
-                      className="form-control"
-                      aria-describedby="emailHelp"
-                      placeholder="Enter email"
-                    />
-                  </div>
-                  <div className="form-group">
-                    <label for="email">Email</label>
-                    <input
-                      type="email"
-                      className="form-control"
-                      aria-describedby="emailHelp"
-                      placeholder="Enter email"
-                    />
-                  </div>
-                
-                  <div className="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input
-                      type="password"
-                      className="form-control"
-                      placeholder="Password"
-                    />
-                  </div>
-                  <div className="form-group">
-                    <label for="confirmPassword">Confirm Password</label>
-                    <input
-                      type="password"
-                      className="form-control"
-                      placeholder="Password"
-                    />
-                  </div>
-                  <div className="form-group">
-                    <label for="imageLink">Image Link</label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      placeholder="Image"
-                    />
-                  </div>
-                  <div className="form-group">
-                    <label for="songLink">Song Link</label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      placeholder="Song"
-                    />
-                  </div>
-                  <br />
 
-                  <button type="submit" className="btn btn-primary">
-                    Submit
-                  </button>
-                </form>
+                <div className="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input
+                    type="password"
+                    className="form-control"
+                    placeholder="Password"
+                  />
+                </div>
+                <div className="form-group">
+                  <label for="exampleInputPassword1">Confirm Password</label>
+                  <input
+                    type="password"
+                    className="form-control"
+                    placeholder="Password"
+                  />
+                </div>
+                <div className="form-group">
+                  <label for="exampleInputPassword1">Image Link</label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Image"
+                  />
+                </div>
+                <div className="form-group">
+                  <label for="exampleInputPassword1">Song Link</label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Song"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1">
+                    Bio
+                  </label>
+                  <textarea
+                    class="form-control"
+                    id="exampleFormControlTextarea1"
+                    rows="3"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1">
+                    Investment info
+                  </label>
+                  <textarea
+                    class="form-control"
+                    id="exampleFormControlTextarea1"
+                    rows="3"
+                  />
+                </div>
+                <br />
 
-                <button type="submit" className="btn btn-info">
+                <button type="submit" className="btn btn-primary">
                   Submit
                 </button>
-               
               </form>
-              </div>
-
               <br />
             </Col>
+            <Col size="md-3" />
           </Row>
         </Container>
       </div>
