@@ -1,3 +1,4 @@
+import React from "react";
 import axios from "axios";
 
 export default {
@@ -13,8 +14,24 @@ export default {
   deleteArtist: function(id) {
     return axios.delete("/api/artists/" + id);
   },
-  // Saves a Artist to the database
+  // Saves an Artist to the database
   saveArtist: function(artistData) {
     return axios.post("/api/artists", artistData);
+  },
+   // Gets all investors
+   getInvestors: function() {
+    return axios.get("/api/investors");
+  },
+  // Gets the investor with the given id
+  getInvestor: function(id) {
+    return axios.get("/api/investors/" + id);
+  },
+  // Deletes the investor with the given id
+  deleteInvestor: function(id) {
+    return axios.delete("/api/investors/" + id);
+  },
+  // Saves an investor to the database
+  saveInvestor: function(investorData) {
+    return axios.post("/api/investors", investorData);
   }
 };
