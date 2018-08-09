@@ -43,7 +43,7 @@ export class ArtistSignUp extends Component {
         <Nav />
         <Container fluid>
           <Row>
-            {/* <Col size="md-10"> */}
+            <Col size="md-10">
             <div className="form-artist">
             <p className="h4 text-center mb-4">Sign up</p>
 
@@ -116,7 +116,7 @@ export class ArtistSignUp extends Component {
               </form>
               </div>
               <br />
-            {/* </Col> */}
+            </Col>
           </Row>
         </Container>
       </div>
