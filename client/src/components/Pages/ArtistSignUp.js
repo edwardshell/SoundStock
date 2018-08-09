@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Container, Row, Col } from "../Grid";
 import Nav from "../Navbar/Nav";
 import API from "../../utils/API";
+import "./artist.css";
+
 
 export class ArtistSignUp extends Component {
   state = {
@@ -41,6 +43,30 @@ export class ArtistSignUp extends Component {
         <Nav />
         <Container fluid>
           <Row>
+
+            <Col size="md-10">
+            <div className="form-artist">
+            <p className="h4 text-center mb-4">Sign up</p>
+
+              <form>
+                <div className="form-group">
+                  <label for="name">Name</label>
+                  <input
+                    type="email"
+                    className="form-control"
+                    aria-describedby="emailHelp"
+                    placeholder="Name"
+                  />
+                </div>
+                <div className="form-group">
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    className="form-control"
+                    aria-describedby="emailHelp"
+                    placeholder="Enter email"
+                  />
+                </div>
             <Col size="6">
               <br />
                 <form>
@@ -101,6 +127,13 @@ export class ArtistSignUp extends Component {
                     Submit
                   </button>
                 </form>
+
+                <button type="submit" className="btn btn-info">
+                  Submit
+                </button>
+               
+              </form>
+              </div>
 
               <br />
             </Col>
