@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Container, Row, Col } from "../Grid";
 import Nav from "../Navbar/Nav";
 import "./investor.css";
+import API from "../../utils/API";
+
 
 export class InvestorSignUp extends Component {
   state = {
@@ -9,8 +11,6 @@ export class InvestorSignUp extends Component {
     password: "",
     name: ""
   };
-  componentDidMount() {}
-
   handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({
@@ -20,7 +20,11 @@ export class InvestorSignUp extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    this.setState({ email: "", password: "", name: "" });
+    API.saveInvestor({
+      email: this.state.email,
+      password: this.state.password,
+      name: this.state.name
+    })
   };
 
   render() {
@@ -31,43 +35,42 @@ export class InvestorSignUp extends Component {
           <Row>
             <Col size="8">
               <form className="investor-form">
-              <p className="h4 text-center mb-4">Sign up</p>
+                <p className="h4 text-center mb-4">Sign up</p>
 
-                <div className="form-group">
-                  <label for="name">Name</label>
-                  <input
-                    type="email"
-                    className="form-control"
-                    aria-describedby="emailHelp"
-                    placeholder="Name"
-                  />
-                </div>
-                <div className="form-group">
-                  <label for="email">Email</label>
-                  <input
-                    type="email"
-                    className="form-control"
-                    aria-describedby="emailHelp"
-                    placeholder="Enter email"
-                  />
-                </div>
+                <input
+                  value={this.state.email}
+                  onChange={this.handleInputChange}
+                  name="email"
+                  className="form-control m-2"
+                  type="text"
+                  placeholder="email" />
+                <input
+                  value={this.state.password}
+                  onChange={this.handleInputChange}
+                  name="password"
+                  className="form-control m-2"
+                  type="text"
+                  placeholder="password" />
+                <input
+                  onChange={this.handleInputChange}
+                  name="confirm"
+                  className="form-control m-2"
+                  type="text"
+                  placeholder="confirm password" />
+                <input
+                  value={this.state.name}
+                  onChange={this.handleInputChange}
+                  name="name"
+                  className="form-control m-2"
+                  type="text"
+                  placeholder="name" />
 
-                <div className="form-group">
-                  <label for="exampleInputPassword1">Password</label>
-                  <input
-                    type="password"
-                    className="form-control"
-                    placeholder="Password"
-                  />
-                </div>
-                <div className="form-group">
-                  <label for="exampleInputPassword1">Confirm Password</label>
-                  <input
-                    type="password"
-                    className="form-control"
-                    placeholder="Password"
-                  />
-                </div>
+                <button
+                  onClick={this.handleFormSubmit}
+                  type="submit"
+                  className="btn btn-info">
+                  Submit
+                                  </button>
               </form>
             </Col>
           </Row>

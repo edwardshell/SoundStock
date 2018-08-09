@@ -15,26 +15,27 @@ export class ArtistSignUp extends Component {
     bio: "",
     goal: ""
   };
-  componentDidMount() {}
-
+  
   handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({
       [name]: value
     });
   };
-
+  
   handleFormSubmit = event => {
     event.preventDefault();
-    this.setState({
-      email: "",
-      password: "",
-      name: "",
-      imageLink: "",
-      songLink: "",
-      bio: "",
-      goal: ""
-    });
+    API.saveArtist({
+        email: this.state.email,
+        password: this.state.password,
+        name: this.state.name,
+        imageLink: this.state.imageLink,
+        songLink: this.state.songLink,
+        bio: this.state.bio,
+        goal: this.state.goal
+    }).then(res => this.console.log(res))
+        .catch(err => console.log(err))
+    
   };
 
   render() {
@@ -46,83 +47,100 @@ export class ArtistSignUp extends Component {
             <Col size="md-3" />
             <Col size="md-6">
             <br />
-              <form>
+            <form>
                 <div className="form-group">
-                  <label for="name">Name</label>
                   <input
-                    type="email"
+                    value={this.state.name}
+                    onChange={this.handleInputChange}           
+                    type="text"
                     className="form-control"
                     aria-describedby="emailHelp"
-                    placeholder="Enter email"
+                    placeholder="Name"
+                    name="name"
+
                   />
                 </div>
                 <div className="form-group">
-                  <label for="email">Email</label>
                   <input
+                    value={this.state.email}
+                    onChange={this.handleInputChange}           
                     type="email"
                     className="form-control"
                     aria-describedby="emailHelp"
                     placeholder="Enter email"
+                    name="email"
                   />
                 </div>
 
                 <div className="form-group">
-                  <label for="exampleInputPassword1">Password</label>
                   <input
+                    value={this.state.password}
+                    onChange={this.handleInputChange}           
                     type="password"
                     className="form-control"
                     placeholder="Password"
+                    name="password"
                   />
                 </div>
                 <div className="form-group">
-                  <label for="exampleInputPassword1">Confirm Password</label>
                   <input
+                    
+                    onChange={this.handleInputChange}           
                     type="password"
                     className="form-control"
                     placeholder="Password"
+                    name="confirm"
                   />
                 </div>
                 <div className="form-group">
-                  <label for="exampleInputPassword1">Image Link</label>
                   <input
+                    value={this.state.imageLink}
+                    onChange={this.handleInputChange}           
                     type="text"
                     className="form-control"
                     placeholder="Image"
+                    name="imageLink"
                   />
                 </div>
                 <div className="form-group">
-                  <label for="exampleInputPassword1">Song Link</label>
                   <input
+                    value={this.state.songLink}
+                    onChange={this.handleInputChange}           
                     type="text"
                     className="form-control"
                     placeholder="Song"
+                    name="songLink"
                   />
                 </div>
-                <div class="form-group">
-                  <label for="exampleFormControlTextarea1">
-                    Bio
-                  </label>
-                  <textarea
-                    class="form-control"
-                    id="exampleFormControlTextarea1"
-                    rows="3"
-                  />
+                <div className="form-group">
+                <textarea 
+                    value={this.state.bio}
+                    onChange={this.handleInputChange}                
+                    className="form-control" 
+                    name="bio" 
+                    cols="50" 
+                    rows="5"
+                />
                 </div>
-                <div class="form-group">
-                  <label for="exampleFormControlTextarea1">
-                    Investment info
-                  </label>
-                  <textarea
-                    class="form-control"
-                    id="exampleFormControlTextarea1"
-                    rows="3"
-                  />
+                <div className="form-group">
+                <textarea 
+                    value={this.state.goal}
+                    onChange={this.handleInputChange}
+                    className="form-control"
+                    name="goal" 
+                    cols="50" 
+                    rows="5" 
+                    placeholder="I'm selling 10% of all future publishing for $50 per share out of 100 shares"/>
                 </div>
                 <br />
 
-                <button type="submit" className="btn btn-primary">
+                <button 
+                onClick= {this.handleFormSubmit}
+                type="submit" 
+                className="btn btn-info">
                   Submit
                 </button>
+               
               </form>
               <br />
             </Col>
