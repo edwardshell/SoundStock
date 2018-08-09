@@ -1,10 +1,11 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
+// validate data here using requred: true & function for password length
 const investorSchema = new Schema({
-  name: { type: String, required: true },
-  author: { type: String, required: true },
-  password: {type:String, requires: true},
+  name: { type: String },
+  author: { type: String },
+  password: {type: String},
 });
 
 const Investor = mongoose.model("Investor", investorSchema);

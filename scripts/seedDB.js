@@ -29,7 +29,7 @@ const investorSeed = [
 ]
 
 db.Artist
-  .remove({})
+  // .remove({})
   .then(() => db.Artist.collection.insertMany(artistSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");

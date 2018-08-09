@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import { Container, Row, Col } from "../Grid"
 import Nav from "../Navbar/Nav"
+import API from "../../utils/API";
 
 export class InvestorSignUp extends Component {
 
@@ -8,9 +9,6 @@ export class InvestorSignUp extends Component {
         email: "",
         password: "",
         name: "",
-    }
-    componentDidMount() {
-
     }
 
     handleInputChange = event => {
@@ -22,7 +20,11 @@ export class InvestorSignUp extends Component {
 
     handleFormSubmit = event => {
         event.preventDefault();
-        this.setState({ email: "", password: "", name: "",});
+        API.saveInvestor({
+            email: this.state.email,
+            password: this.state.password,
+            name: this.state.name
+        })
     };
 
     render() {
@@ -31,12 +33,42 @@ export class InvestorSignUp extends Component {
                 <Nav />
                 <Container fluid>
                     <Row>
-                        <Col size="6">
+                        <Col size="3">
                             <form>
-                                <input className="form-control m-2" type="text" placeholder="email" />
-                                <input className="form-control m-2" type="text" placeholder="password" />
-                                <input className="form-control m-2" type="text" placeholder="confirm password" />
-                                <input className="form-control m-2" type="text" placeholder="name" />
+                                <input
+                                    value={this.state.email}
+                                    onChange={this.handleInputChange}
+                                    name="email"
+                                    className="form-control m-2"
+                                    type="text"
+                                    placeholder="email" />
+                                <input
+                                    value={this.state.password}
+                                    onChange={this.handleInputChange}
+                                    name="password"
+                                    className="form-control m-2"
+                                    type="text"
+                                    placeholder="password" />
+                                <input
+                                    onChange={this.handleInputChange}
+                                    name="confirm"
+                                    className="form-control m-2"
+                                    type="text"
+                                    placeholder="confirm password" />
+                                <input
+                                    value={this.state.name}
+                                    onChange={this.handleInputChange}
+                                    name="name"
+                                    className="form-control m-2"
+                                    type="text"
+                                    placeholder="name" />
+
+                                <button
+                                    onClick={this.handleFormSubmit}
+                                    type="submit"
+                                    className="btn btn-info">
+                                    Submit
+                                  </button>
                             </form>
                         </Col>
                     </Row>
