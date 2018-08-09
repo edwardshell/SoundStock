@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Container, Row, Col } from "../Grid";
 import Nav from "../Navbar/Nav";
 import API from "../../utils/API";
+import "./artist.css";
+
 
 export class ArtistSignUp extends Component {
   state = {
@@ -41,7 +43,10 @@ export class ArtistSignUp extends Component {
         <Nav />
         <Container fluid>
           <Row>
-            <Col size="md-3">
+            {/* <Col size="md-10"> */}
+            <div className="form-artist">
+            <p className="h4 text-center mb-4">Sign up</p>
+
               <form>
                 <div className="form-group">
                   <label for="name">Name</label>
@@ -109,8 +114,9 @@ export class ArtistSignUp extends Component {
                 </button>
                
               </form>
+              </div>
               <br />
-            </Col>
+            {/* </Col> */}
           </Row>
         </Container>
       </div>
