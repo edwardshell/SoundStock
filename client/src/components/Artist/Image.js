@@ -1,9 +1,7 @@
 import React from "react";
 
-const Image = () => (
-  <div>
-    <img src={this.props.img} className="rounded float-left" alt={this.props.name} />
-  </div>
-);
+ const Image = () => <img src="http://via.placeholder.com/150x150" />;
+ 
+ export default Image;
 
-export default Image;
+

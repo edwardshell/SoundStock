@@ -43,6 +43,7 @@ export class ArtistSignUp extends Component {
         <Nav />
         <Container fluid>
           <Row>
+
             <Col size="md-10">
             <div className="form-artist">
             <p className="h4 text-center mb-4">Sign up</p>
@@ -66,48 +67,66 @@ export class ArtistSignUp extends Component {
                     placeholder="Enter email"
                   />
                 </div>
+            <Col size="6">
+              <br />
+                <form>
+                  <div className="form-group">
+                    <label for="name">Name</label>
+                    <input
+                      type="email"
+                      className="form-control"
+                      aria-describedby="emailHelp"
+                      placeholder="Enter email"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label for="email">Email</label>
+                    <input
+                      type="email"
+                      className="form-control"
+                      aria-describedby="emailHelp"
+                      placeholder="Enter email"
+                    />
+                  </div>
+                
+                  <div className="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input
+                      type="password"
+                      className="form-control"
+                      placeholder="Password"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input
+                      type="password"
+                      className="form-control"
+                      placeholder="Password"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label for="imageLink">Image Link</label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="Image"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label for="songLink">Song Link</label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="Song"
+                    />
+                  </div>
+                  <br />
 
-                <div className="form-group">
-                  <label for="exampleInputPassword1">Password</label>
-                  <input
-                    type="password"
-                    className="form-control"
-                    placeholder="Password"
-                  />
-                </div>
-                <div className="form-group">
-                  <label for="exampleInputPassword1">Confirm Password</label>
-                  <input
-                    type="password"
-                    className="form-control"
-                    placeholder="Password"
-                  />
-                </div>
-                <div className="form-group">
-                  <label for="exampleInputPassword1">Image Link</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    placeholder="Image"
-                  />
-                </div>
-                <div className="form-group">
-                  <label for="exampleInputPassword1">Song Link</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    placeholder="Song"
-                  />
-                </div>
-                <div className="form-group">
-                <label htmlFor="">Artist bio</label>
-                <textarea className="form-control" name="bio" id="" cols="50" rows="5"></textarea>
-                </div>
-                <div className="form-group">
-                <label htmlFor="">Description of investment opportunity</label>
-                <textarea className="form-control" name="description" id="" cols="50" rows="5" placeholder="I'm selling 10% of all future publishing for $50 per share out of 100 shares"></textarea>
-                </div>
-                <br />
+                  <button type="submit" className="btn btn-primary">
+                    Submit
+                  </button>
+                </form>
 
                 <button type="submit" className="btn btn-info">
                   Submit
@@ -115,6 +134,7 @@ export class ArtistSignUp extends Component {
                
               </form>
               </div>
+
               <br />
             </Col>
           </Row>
