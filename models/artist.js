@@ -1,12 +1,13 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
+// validate data here using requred: true & function for password length
 const artistSchema = new Schema({
-    email: { type: String, required: true },
-    password: { type: String, required: true },
-    name: { type: String, required: true },
-    songLink: { type: String, required: true },
-    imageLink: { type: String, required: true },
+    email: { type: String},
+    password: { type: String},
+    name: { type: String},
+    songLink: { type: String},
+    imageLink: { type: String},
     bio: String,
     goal: String 
 });
