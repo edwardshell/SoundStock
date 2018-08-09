@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "../Grid";
 import Nav from "../Navbar/Nav";
+import API from "../../utils/API";
 
 export class ArtistSignUp extends Component {
   state = {
@@ -100,6 +101,7 @@ export class ArtistSignUp extends Component {
                     Submit
                   </button>
                 </form>
+
               <br />
             </Col>
           </Row>
