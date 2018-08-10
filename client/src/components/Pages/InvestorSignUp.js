@@ -25,6 +25,13 @@ export class InvestorSignUp extends Component {
       password: this.state.password,
       name: this.state.name
     })
+        .then(res => {
+            console.log(res) 
+            this.props.history.push('/')
+        })
+        .catch(err => {
+            console.log(err)
+        })
   };
 
   render() {
@@ -70,7 +77,7 @@ export class InvestorSignUp extends Component {
                   type="submit"
                   className="btn btn-info">
                   Submit
-                                  </button>
+                </button>
               </form>
             </Col>
           </Row>

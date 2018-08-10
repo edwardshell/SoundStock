@@ -31,11 +31,16 @@ export class ArtistSignUp extends Component {
         imageLink: this.state.imageLink,
         songLink: this.state.songLink,
         bio: this.state.bio,
-        goal: this.state.goal
-    }).then(res => this.console.log(res))
-        .catch(err => console.log(err))
-    
-  };
+        goal: this.state.goal 
+    })
+        .then(res => {
+        console.log(res) 
+        this.props.history.push('/')
+    })
+    .catch(err => {
+        console.log(err)
+    })
+};
 
   render() {
     return (
