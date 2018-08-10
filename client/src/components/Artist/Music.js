@@ -1,8 +1,8 @@
 import React from "react";
 
-const Music = () => (
-    <audio controls>
-        <source src="..." type="audio/" />
+const Music = (props) => (
+    <audio autoPlay controls>
+        <source src={props.src} type="audio/" />
     </audio>
 );
 

@@ -36,9 +36,9 @@ class HomeContainer extends Component {
           {this.state.artists.length ? (
             <div>
               {this.state.artists.map(artist => (
-                <CardDiv key={artist.id} name={artist.name} bio={artist.bio} />
+                <CardDiv key={artist._id} name={artist.name} bio={artist.bio} src="./krit.mp3" img={artist.imageLink} />
               ))}
-            </div>
+            </div> 
           ) : (
             <h3>No results to display</h3>
           )}
