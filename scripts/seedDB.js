@@ -17,6 +17,15 @@ const artistSeed = [
     songLink:"https://www.youtube.com",
     bio:"I'm the man wiht the plan",
     goal:"I'm selling 10% of all future publishing for $50 per share out of 100 shares"
+  },
+  {
+    email: "shelleg@g.cofc.edu",
+    password:"password",
+    name: "Ed Shell",
+    imageLink: "https://image.ibb.co/k0DyFp/untitled.png",
+    songLink: "https://www.youtube.com/watch?v=5YIxpNPhAQE",
+    bio: "I'm like a mix bewteen fergie and jesus and I like to image jesus playing lead vocals for lynard skynard and Im in the front row hammered drunk",
+    goal: "Tryna make bank"
   }
 ];
 
