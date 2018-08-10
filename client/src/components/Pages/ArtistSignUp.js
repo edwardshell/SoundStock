@@ -4,7 +4,6 @@ import Nav from "../Navbar/Nav";
 import API from "../../utils/API";
 import "./artist.css";
 
-
 export class ArtistSignUp extends Component {
   state = {
     email: "",

@@ -1,7 +1,7 @@
 import React from "react";
 
 const Progress = () => (
-  <div class="progress">
+  <div className="progress">
     <div
       className="progress-bar"
       role="progressbar"

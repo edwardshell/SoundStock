@@ -1,5 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
+const passportLocalMongoose = require("passport-local-mongoose");
+
 
 // validate data here using requred: true & function for password length
 const artistSchema = new Schema({
@@ -11,6 +13,8 @@ const artistSchema = new Schema({
     bio: String,
     goal: String 
 });
+
+artistSchema.plugin(passportLocalMongoose);
 
 const Artist = mongoose.model("Artist", artistSchema);
 
