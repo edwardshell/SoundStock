@@ -19,14 +19,14 @@ export const CardDiv = (props) => (
     <div className="card-body">
       <div className="row">
         <div className="col-md-2">
-          <Image />
+          <Image img={props.img}/>
         </div>
         <div className="col-md-6">
         {/* added child to this so that we can assaign the this.props.summary that we get from db */}
           <p>{props.bio}</p>
         </div>
         <div className="col-md-4">
-          <Music />
+          <Music src={props.src}/>
           <div className="row">
             <div className="col-md-10" style={styles.padding}>
               <Progress />
