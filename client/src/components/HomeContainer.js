@@ -33,18 +33,15 @@ class HomeContainer extends Component {
       <div>
         <Nav />
         <Container>
-          {this.state.artists.length ? (
-            <div>
-              {this.state.artists.map(artist => (
-                <CardDiv key={artist._id} name={artist.name} bio={artist.bio} src="./krit.mp3" img={artist.imageLink} />
-              ))}
-            </div> 
-          ) : (
-            <h3>No results to display</h3>
-          )}
+        <div className="flexContainer flexCenter itemCenter fullHeight centerImage">
+        <CardDiv />
+
+        </div>
         </Container>
-      </div>
-    );
-  }
-}
+
+        <div>
+            <footer className="flexContainer flexCenter blueBackground whiteText height50">&copy; Sound-Stock</footer>
+        </div>        
+</div>
+
 export default HomeContainer;
