@@ -8,6 +8,7 @@ import API from "../utils/API";
 const HomeContainer = () => 
 <div>
     <Nav />
+    <br></br>
         <Container>
             <CardDiv />
         </Container>
