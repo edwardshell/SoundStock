@@ -29,7 +29,10 @@ export class SignIn extends Component {
 		API.saveUser({
 			email: this.state.email,
 			password: this.state.password
-	}).then(res => this.console.log(res))
+	}).then(res => {
+		this.console.log(res)
+		this.props.history.push('/')
+	})
 			.catch(err => console.log(err))
 	};
 
