@@ -10,9 +10,16 @@ const HomeContainer = () =>
     <Nav />
     <br></br>
         <Container>
-            <CardDiv />
+        <div className="flexContainer flexCenter itemCenter fullHeight centerImage">
+        <CardDiv />
+
+        </div>
         </Container>
-    
+
+        <div>
+            <footer className="flexContainer flexCenter blueBackground whiteText height50">&copy; Sound-Stock</footer>
+        </div>        
 </div>
 
 export default HomeContainer;
+

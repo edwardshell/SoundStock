@@ -22,3 +22,24 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.centerImage {
+  background: url("images/background3.jpg") center;
+  background-size: cover;
+}
+
+.fullHeight {
+  height: 100vh;
+}
+
+.itemCenter {
+  align-items: center;
+}
+
+.flexCenter {
+  justify-content: center;
+}
+
+.flexContainer {
+  display: flex;
+}
