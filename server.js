@@ -7,7 +7,7 @@ const routes = require("./routes");
 const app = express();
 var session = require("express-session");
 var passport = require("./config/passport");
-const PORT = process.env.PORT || 3003;
+const PORT = process.env.PORT || 3001;
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/soundstock");
 app.use(morgan('dev'))
