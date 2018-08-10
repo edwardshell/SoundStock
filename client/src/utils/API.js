@@ -1,4 +1,3 @@
-import React from "react";
 import axios from "axios";
 
 export default {
@@ -33,5 +32,10 @@ export default {
   // Saves an investor to the database
   saveInvestor: function(investorData) {
     return axios.post("/api/investors", investorData);
+  },
+  // ??
+  saveUser: function(userData){
+    return axios.post("/api/user", userData)
   }
+  
 };
