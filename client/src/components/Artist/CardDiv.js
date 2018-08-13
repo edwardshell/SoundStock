@@ -2,6 +2,7 @@ import React from "react";
 import Progress from "./Progress";
 import Music from "./Music";
 import Image from "./Image";
+import InvestBtn from "./Invest";
 
 const styles = {
   padding: {
@@ -10,6 +11,11 @@ const styles = {
   },
   card: {
     marginTop: 50
+  },
+
+  invest: {
+    paddingLeft: 140,
+    paddingTop: 30
   }
 };
 
@@ -30,6 +36,11 @@ export const CardDiv = (props) => (
           <div className="row">
             <div className="col-md-10" style={styles.padding}>
               <Progress />
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-4" style={styles.invest}>
+              <InvestBtn />
             </div>
           </div>
         </div>

@@ -7,6 +7,6 @@ const styles = {
     }
 }
 
-const Image = props => <img style={styles.img} src={props.img} lt="artist image" />;
+const Image = props => <img style={styles.img} src={props.img} alt="artist image" />;
 
 export default Image;
