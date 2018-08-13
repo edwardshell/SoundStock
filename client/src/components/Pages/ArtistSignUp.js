@@ -14,64 +14,65 @@ export class ArtistSignUp extends Component {
     bio: "",
     goal: ""
   };
-  
+
   handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({
       [name]: value
     });
   };
-  
+
   handleFormSubmit = event => {
     event.preventDefault();
     API.saveArtist({
-        email: this.state.email,
-        password: this.state.password,
-        name: this.state.name,
-        imageLink: this.state.imageLink,
-        songLink: this.state.songLink,
-        bio: this.state.bio,
-        goal: this.state.goal 
+      email: this.state.email,
+      password: this.state.password,
+      name: this.state.name,
+      imageLink: this.state.imageLink,
+      songLink: this.state.songLink,
+      bio: this.state.bio,
+      goal: this.state.goal
     })
-        .then(res => {
-        console.log(res) 
-        this.props.history.push('/')
-    })
-    .catch(err => {
-        console.log(err)
-    })
-};
+      .then(res => {
+        console.log(res);
+        this.props.history.push("/");
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  };
 
   render() {
     return (
-       <div>
+      <div>
         <Nav />
+        <div className="flexContainer flexCenter itemCenter fullHeight centerImage">
+        <br />
         <Container fluid>
           <Row>
             <Col size="md-3" />
             <Col size="md-6">
-            <br />
-            <form>
+              <br />
+              <form>
                 <div className="form-group">
                   <input
                     value={this.state.name}
-                    onChange={this.handleInputChange}           
+                    onChange={this.handleInputChange}
                     type="text"
                     className="form-control"
                     aria-describedby="emailHelp"
                     placeholder="Name"
                     name="name"
-
                   />
                 </div>
                 <div className="form-group">
                   <input
                     value={this.state.email}
-                    onChange={this.handleInputChange}           
+                    onChange={this.handleInputChange}
                     type="email"
                     className="form-control"
                     aria-describedby="emailHelp"
-                    placeholder="Enter email"
+                    placeholder="Email"
                     name="email"
                   />
                 </div>
@@ -79,7 +80,7 @@ export class ArtistSignUp extends Component {
                 <div className="form-group">
                   <input
                     value={this.state.password}
-                    onChange={this.handleInputChange}           
+                    onChange={this.handleInputChange}
                     type="password"
                     className="form-control"
                     placeholder="Password"
@@ -88,18 +89,17 @@ export class ArtistSignUp extends Component {
                 </div>
                 <div className="form-group">
                   <input
-                    
-                    onChange={this.handleInputChange}           
+                    onChange={this.handleInputChange}
                     type="password"
                     className="form-control"
-                    placeholder="Password"
+                    placeholder="Confirm password"
                     name="confirm"
                   />
                 </div>
                 <div className="form-group">
                   <input
                     value={this.state.imageLink}
-                    onChange={this.handleInputChange}           
+                    onChange={this.handleInputChange}
                     type="text"
                     className="form-control"
                     placeholder="Image"
@@ -109,7 +109,7 @@ export class ArtistSignUp extends Component {
                 <div className="form-group">
                   <input
                     value={this.state.songLink}
-                    onChange={this.handleInputChange}           
+                    onChange={this.handleInputChange}
                     type="text"
                     className="form-control"
                     placeholder="Song"
@@ -117,40 +117,47 @@ export class ArtistSignUp extends Component {
                   />
                 </div>
                 <div className="form-group">
-                <textarea 
+                  <textarea
                     value={this.state.bio}
-                    onChange={this.handleInputChange}                
-                    className="form-control" 
-                    name="bio" 
-                    cols="50" 
+                    onChange={this.handleInputChange}
+                    className="form-control"
+                    placeholder="Tell us about yourself"
+                    name="bio"
+                    cols="50"
                     rows="5"
-                />
+                  />
                 </div>
                 <div className="form-group">
-                <textarea 
+                  <textarea
                     value={this.state.goal}
                     onChange={this.handleInputChange}
                     className="form-control"
-                    name="goal" 
-                    cols="50" 
-                    rows="5" 
-                    placeholder="I'm selling 10% of all future publishing for $50 per share out of 100 shares"/>
+                    name="goal"
+                    cols="50"
+                    rows="5"
+                    placeholder="I'm selling 10% of all future publishing for $50 per share out of 100 shares"
+                  />
                 </div>
                 <br />
 
-                <button 
-                onClick= {this.handleFormSubmit}
-                type="submit" 
-                className="btn btn-info">
+                <button
+                  onClick={this.handleFormSubmit}
+                  type="submit"
+                  className="btn btn-success"
+                >
                   Submit
                 </button>
-               
               </form>
-              <br />
             </Col>
             <Col size="md-3" />
           </Row>
         </Container>
+        </div>
+              <div>
+                <footer className="flexContainer flexCenter blueBackground whiteText height50">
+                  &copy; Sound-Stock
+                </footer>
+              </div>
       </div>
     );
   }

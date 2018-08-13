@@ -1,25 +1,23 @@
-import React from "react"
-import { Container, Row, Col } from "./Grid"
-import {Nav, Search, SignIn} from "./Navbar"
-import {CardDiv} from "./Artist"
+import React from "react";
+import { Container, Row, Col } from "./Grid";
+import { Nav, Search, SignIn } from "./Navbar";
+import { CardDiv } from "./Artist";
 import API from "../utils/API";
 
-
-const HomeContainer = () => 
-<div>
+const HomeContainer = () => (
+  <div>
     <Nav />
-    <br></br>
-        <Container>
-        <div className="flexContainer flexCenter itemCenter fullHeight centerImage">
+    <div className="flexContainer flexCenter itemCenter fullHeight centerImage">
+      <br />
+      <div>
+        <footer className="flexContainer flexCenter blueBackground whiteText height50">
+          &copy; Sound-Stock
+        </footer>
+      </div>
+      <Container>
         <CardDiv />
-
-        </div>
-        </Container>
-
-        <div>
-            <footer className="flexContainer flexCenter blueBackground whiteText height50">&copy; Sound-Stock</footer>
-        </div>        
-</div>
-
+      </Container>
+    </div>
+  </div>
+);
 export default HomeContainer;
-

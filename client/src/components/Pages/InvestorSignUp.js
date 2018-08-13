@@ -38,6 +38,8 @@ export class InvestorSignUp extends Component {
     return (
       <div>
         <Nav />
+        <div className="flexContainer flexCenter itemCenter fullHeight centerImage">
+        <br />
         <Container fluid>
           <Row>
             <Col size="8">
@@ -50,38 +52,42 @@ export class InvestorSignUp extends Component {
                   name="email"
                   className="form-control m-2"
                   type="text"
-                  placeholder="email" />
+                  placeholder="Email" />
+                               
                 <input
                   value={this.state.password}
                   onChange={this.handleInputChange}
                   name="password"
                   className="form-control m-2"
-                  type="text"
-                  placeholder="password" />
+                  type="password"
+                  placeholder="Password" />
+                               
                 <input
                   onChange={this.handleInputChange}
                   name="confirm"
                   className="form-control m-2"
-                  type="text"
-                  placeholder="confirm password" />
+                  type="password"
+                  placeholder="Confirm password" />
+                
                 <input
                   value={this.state.name}
                   onChange={this.handleInputChange}
                   name="name"
                   className="form-control m-2"
                   type="text"
-                  placeholder="name" />
-
+                  placeholder="Name" />
+                <br />
                 <button
                   onClick={this.handleFormSubmit}
                   type="submit"
-                  className="btn btn-info">
+                  className="btn btn-success">
                   Submit
                 </button>
               </form>
             </Col>
           </Row>
         </Container>
+        </div>
       </div>
     );
   }
