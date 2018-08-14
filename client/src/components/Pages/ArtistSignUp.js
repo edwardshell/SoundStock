@@ -18,7 +18,7 @@ export class ArtistSignUp extends Component {
   handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({
-      [name]: value
+      [name]: value 
     });
   };
 
@@ -138,8 +138,6 @@ export class ArtistSignUp extends Component {
                     placeholder="I'm selling 10% of all future publishing for $50 per share out of 100 shares"
                   />
                 </div>
-                <br />
-
                 <button
                   onClick={this.handleFormSubmit}
                   type="submit"

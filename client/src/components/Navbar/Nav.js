@@ -16,7 +16,7 @@ const styles = {
     color: "white"
   },
   img: {
-    width: 155,
+    width: 165,
     height: 115
   }
 

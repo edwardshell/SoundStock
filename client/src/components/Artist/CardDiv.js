@@ -2,34 +2,45 @@ import React from "react";
 import Progress from "./Progress";
 import Music from "./Music";
 import Image from "./Image";
+import InvestBtn from "./Invest";
 
 const styles = {
   padding: {
     paddingTop: 40,
     marginLeft: 10
+  },
+  card: {
+    marginTop: 50
+  },
+
+  invest: {
+    paddingLeft: 140,
+    paddingTop: 30
   }
 };
 
-export const CardDiv = () => (
-  <div className="container">
-    <div className="card">
-      <h5 className="card-header">Featured</h5>
-      <div className="card-body">
-        <div className="row">
-          <div className="col-md-2">
-            <Image />
+export const CardDiv = (props) => (
+  <div className="card" style={styles.card}>
+    <h5 className="card-header">Featured: {props.name}</h5>
+    <div className="card-body">
+      <div className="row">
+        <div className="col-md-2">
+          <Image img={props.img}/>
+        </div>
+        <div className="col-md-6">
+        {/* added child to this so that we can assaign the this.props.summary that we get from db */}
+          <p>{props.bio}</p>
+        </div>
+        <div className="col-md-4">
+          <Music src={props.src}/>
+          <div className="row">
+            <div className="col-md-10" style={styles.padding}>
+              <Progress />
+            </div>
           </div>
-          <div className="col-md-6">
-          <p>
-            summary and bio that is recieved from sign up form will go here
-          </p>
-          </div>
-          <div className="col-md-4">
-            <Music />
-            <div className="row">
-              <div className="col-md-10" style={styles.padding}>
-                <Progress />
-              </div>
+          <div className="row">
+            <div className="col-md-4" style={styles.invest}>
+              <InvestBtn />
             </div>
           </div>
         </div>

@@ -3,7 +3,7 @@ import React from "react";
 const styles = {
     input: {
         borderColor: "#237c9a",
-        boxShadow: "0 0 0 3px rgba(35,124,154, .25)",
+        boxShadow: "0 0 0 3px rgba(35, 124, 154, .25)",
     },
     props: {
         alignContent: "right",
