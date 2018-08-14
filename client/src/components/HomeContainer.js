@@ -35,7 +35,7 @@ class HomeContainer extends Component {
     return (
       <div>
         <Nav />
-        <Carousel  />
+        <Carousel />
 
         <Container>
           {this.state.artists.length ? (
@@ -47,6 +47,7 @@ class HomeContainer extends Component {
                   bio={artist.bio}
                   src={artist.songLink}
                   img={artist.imageLink}
+              
                 />
               ))}
             </div>
