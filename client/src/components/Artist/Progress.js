@@ -1,16 +1,17 @@
 import React from "react";
 
-const Progress = () => (
-  <div className="progress">
-    <div
-      className="progress-bar"
-      role="progressbar"
-      style={{width: "50%"}}
-      aria-valuenow="50"
-      aria-valuemin="0"
-      aria-valuemax="100"
-    >
-      50% invested
+const Progress = props => (
+  <div>
+    <h5> {props.number}% Invested</h5>
+    <div className="progress" style={{ height: "20px" }}>
+      <div
+        className="progress-bar"
+        role="progressbar"
+        style={{ width: props.number + "%" }}
+        aria-valuenow="0"
+        aria-valuemin="0"
+        aria-valuemax="100"
+      />
     </div>
   </div>
 );

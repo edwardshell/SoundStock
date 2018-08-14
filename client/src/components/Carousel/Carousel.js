@@ -2,7 +2,6 @@ import React from "react";
 
 const styles = {
   img: {
-    width: "300px",
     height: "400px"
   },
 
@@ -37,7 +36,7 @@ export const Carousel = () => (
       <div style={styles.margin} className="carousel-item active text-center">
         <img
           style={styles.img}
-          src="https://preview.ibb.co/mM2Bqp/Image_uploaded_from_i_OS.jpg"
+          src="https://preview.ibb.co/mHaRAp/carousel_logo.jpg"
           alt="carouselItem"
         />
         <div className="carousel-caption d-none d-md-block">
@@ -46,7 +45,7 @@ export const Carousel = () => (
         </div>
       </div>
       <div style={styles.margin} className="carousel-item text-center">
-        <img src="https://image.ibb.co/kUXrrU/musiccc.jpg" alt="carouselItem" />
+        <img style={styles.img} src="https://image.ibb.co/kUXrrU/musiccc.jpg" alt="carouselItem" />
         <div className="carousel-caption d-none d-md-block">
           <h5>Featured Artist</h5>
           <p>...</p>
@@ -59,7 +58,7 @@ export const Carousel = () => (
           alt="carouselItem"
         />
         <div className="carousel-caption d-none d-md-block">
-          <h5>Trending Songs</h5>
+          <h5 style={styles.color}>Trending Songs</h5>
           <p>...</p>
         </div>
       </div>
