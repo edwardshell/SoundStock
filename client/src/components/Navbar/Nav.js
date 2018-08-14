@@ -25,7 +25,7 @@ const styles = {
 export const Nav = () => (
   <nav className="navbar navbar-expand-lg navbar-dark" style={styles.nav} >
     <a className="navbar-brand text-info" href="/">
-      <strong> Sound Stock</strong>
+      {/* <strong> Sound Stock</strong> */}
       <img id="logo" src={pic} style={styles.img}/>
     </a>
     <SignIn />
