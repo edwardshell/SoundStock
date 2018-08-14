@@ -35,6 +35,8 @@ class HomeContainer extends Component {
     return (
       <div>
         <Nav />
+        <div className="flexContainer flexCenter itemCenter fullHeight centerImage">
+        <br />
         <Carousel  />
 
         <Container>
@@ -54,6 +56,7 @@ class HomeContainer extends Component {
             <h3>No results to display</h3>
           )}
         </Container>
+        </div>
         <br />
         <Footer />
       </div>
