@@ -11,7 +11,8 @@ const artistSchema = new Schema({
     songLink: { type: String},
     imageLink: { type: String},
     bio: String,
-    goal: String 
+    goal: String,
+    investP: { type: Number }
 });
 
 artistSchema.plugin(passportLocalMongoose);

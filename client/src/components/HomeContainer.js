@@ -16,7 +16,8 @@ class HomeContainer extends Component {
     imageLink: "",
     songLink: "",
     bio: "",
-    goal: ""
+    goal: "",
+    investP: 0
   };
 
   componentDidMount() {
@@ -50,7 +51,9 @@ class HomeContainer extends Component {
                   src={artist.songLink}
                   img={artist.imageLink}
                   alt={artist.name}
-              
+                  artid={artist._id}
+                  investP={artist.investP}
+                  loadArtist={this.loadArtist}
                 />
               ))}
             </div>

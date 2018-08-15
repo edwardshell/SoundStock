@@ -17,6 +17,7 @@ const styles = {
 const Music = props => (
   <div style={styles.song}>
     <div style={styles.controls}>
+      <p>Play</p>
       <iframe
         title="Song Link"
         width="300"

@@ -10,6 +10,12 @@ class InvestBtn extends Component {
     };
   }
 
+  componentDidMount(){
+    this.setState({
+      value: this.props.investP
+    })
+  }
+
   handleChangeStart = () => {
     console.log("Change event started");
   };
@@ -19,11 +25,12 @@ class InvestBtn extends Component {
       value: value
     });
     console.log(value)
-    value = this.state.value;
+    
   };
 
   handleChangeComplete = () => {
     console.log("Change event completed");
+    
   };
 
   render() {
@@ -32,17 +39,17 @@ class InvestBtn extends Component {
       <div>
         <button
           type="button"
-          class="btn btn-success"
+          className="btn btn-success"
           data-toggle="modal"
           data-target={"#" + this.props.artist}
         >
-          Invest in {this.props.artist}
+          Invest
         </button>
 
         <div
           className="modal fade"
           id={this.props.artist}
-          tabindex="-1"
+          tabIndex="-1"
           role="dialog"
           aria-labelledby="exampleModalLabel"
           aria-hidden="true"
