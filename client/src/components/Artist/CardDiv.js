@@ -18,6 +18,10 @@ const styles = {
   invest: {
     paddingLeft: 140,
     paddingTop: 30
+  },
+
+  stuff: {
+    marginTop: "15px"
   }
 };
 
@@ -51,33 +55,33 @@ export class CardDiv extends React.Component {
   render() {
     return (
       <div className="card" style={styles.card}>
-        <h5 className="card-header">Featured: {this.props.name}</h5>
+        <div className="card-header">
+          <div className="row">
+            <div className="col-md-7">
+              <h5>Featured: {this.props.name}</h5>
+            </div>
+            <div className="col-md-3">
+              <Progress number={this.state.number} />
+            </div>
+            <div className="col-md-2" style={styles.stuff}>
+              <InvestBtn
+                artist={this.props.name}
+                grabNumberValue={this.grabNumberValue}
+              />
+            </div>
+          </div>
+        </div>
         <div className="card-body">
           <div className="row">
             <div className="col-md-2">
               <Image img={this.props.img} alt={this.props.alt} />
             </div>
-            <div className="col-md-6">
+            <div className="col-md-5">
               {/* added child to this so that we can assaign the this.props.summary that we get from db */}
               <p>{this.props.bio}</p>
             </div>
-            <div className="col-md-4">
-                        <h6> Click below to play: </h6>
+            <div className="col-md-5">
               <Music src={this.props.src} />
-              <div className="row">
-                <div className="col-md-10" style={styles.padding}>
-                  <Progress number={this.props.investP} />
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-md-4" style={styles.invest}>
-                  <InvestBtn
-                    investP={this.props.investP}
-                    artist={this.props.name}
-                    grabNumberValue={this.grabNumberValue}
-                  />
-                </div>
-              </div>
             </div>
           </div>
         </div>
