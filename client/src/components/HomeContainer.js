@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { Container, Row, Col } from "./Grid";
-import { Nav, Search, SignIn } from "./Navbar";
+import { Container } from "./Grid";
+import { Nav } from "./Navbar";
 import { CardDiv } from "./Artist";
 import { Carousel } from "./Carousel";
 import API from "../utils/API";
@@ -49,6 +49,7 @@ class HomeContainer extends Component {
                   bio={artist.bio}
                   src={artist.songLink}
                   img={artist.imageLink}
+                  alt={artist.name}
               
                 />
               ))}

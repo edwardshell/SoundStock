@@ -40,8 +40,6 @@ export const Carousel = () => (
           alt="carouselItem"
         />
         <div className="carousel-caption d-none d-md-block">
-          <h5 />
-          <p />
         </div>
       </div>
       <div style={styles.margin} className="carousel-item text-center">

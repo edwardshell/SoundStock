@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import logo from "./logo.svg";
 import "./App.css";
 import HomeContainer from "./components/HomeContainer"
 import ArtistSignUp from "./components/Pages/ArtistSignUp"
