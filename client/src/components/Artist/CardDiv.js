@@ -24,7 +24,7 @@ export class CardDiv extends React.Component {
     super(props);
 
     this.state = {
-      number: 10
+      number: 0
     };
   }
 
@@ -41,7 +41,7 @@ export class CardDiv extends React.Component {
         <div className="card-body">
           <div className="row">
             <div className="col-md-2">
-              <Image img={this.props.img} />
+              <Image img={this.props.img} alt={this.props.alt}/>
             </div>
             <div className="col-md-6">
               {/* added child to this so that we can assaign the this.props.summary that we get from db */}
