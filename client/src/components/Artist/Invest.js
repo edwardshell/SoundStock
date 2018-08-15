@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Slider from "react-rangeslider";
 import "react-rangeslider/lib/index.css";
+import { Payment } from "../Payment"
 
 class InvestBtn extends Component {
   constructor(props, context) {
@@ -80,6 +81,9 @@ class InvestBtn extends Component {
                     onChangeComplete={this.handleChangeComplete}
                   />
                   <div className="value">{value}</div>
+                </div>
+                <div>
+                  <Payment />
                 </div>
               </div>
               <div className="modal-footer">
