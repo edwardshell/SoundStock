@@ -61,8 +61,8 @@ export class CardDiv extends React.Component {
               {/* added child to this so that we can assaign the this.props.summary that we get from db */}
               <p>{this.props.bio}</p>
             </div>
-            <h6> Click below to play: </h6>
             <div className="col-md-4">
+                        <h6> Click below to play: </h6>
               <Music src={this.props.src} />
               <div className="row">
                 <div className="col-md-10" style={styles.padding}>
