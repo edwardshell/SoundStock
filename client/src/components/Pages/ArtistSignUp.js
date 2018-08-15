@@ -6,8 +6,6 @@ import "./artist.css";
 
 export class ArtistSignUp extends Component {
   state = {
-    email: "",
-    password: "",
     name: "",
     imageLink: "",
     songLink: "",
@@ -26,8 +24,6 @@ export class ArtistSignUp extends Component {
   handleFormSubmit = event => {
     event.preventDefault();
     API.saveArtist({
-      email: this.state.email,
-      password: this.state.password,
       name: this.state.name,
       imageLink: this.state.imageLink,
       songLink: this.state.songLink,
@@ -54,7 +50,7 @@ export class ArtistSignUp extends Component {
           <Row>
             <Col size="md-3" />
             <Col size="md-6">
-              <br />
+              <h5 className="text-center"><strong>Add Song for Investors</strong></h5>
               <form>
                 <div className="form-group">
                   <input
@@ -65,37 +61,6 @@ export class ArtistSignUp extends Component {
                     aria-describedby="emailHelp"
                     placeholder="Name"
                     name="name"
-                  />
-                </div>
-                <div className="form-group">
-                  <input
-                    value={this.state.email}
-                    onChange={this.handleInputChange}
-                    type="email"
-                    className="form-control"
-                    aria-describedby="emailHelp"
-                    placeholder="Email"
-                    name="email"
-                  />
-                </div>
-
-                <div className="form-group">
-                  <input
-                    value={this.state.password}
-                    onChange={this.handleInputChange}
-                    type="password"
-                    className="form-control"
-                    placeholder="Password"
-                    name="password"
-                  />
-                </div>
-                <div className="form-group">
-                  <input
-                    onChange={this.handleInputChange}
-                    type="password"
-                    className="form-control"
-                    placeholder="Confirm password"
-                    name="confirm"
                   />
                 </div>
                 <div className="form-group">
@@ -118,7 +83,7 @@ export class ArtistSignUp extends Component {
                     name="songLink"
                   />
                 </div>
-                <div className="form-group">
+                {/* <div className="form-group">
                   <textarea
                     value={this.state.bio}
                     onChange={this.handleInputChange}
@@ -128,7 +93,7 @@ export class ArtistSignUp extends Component {
                     cols="50"
                     rows="5"
                   />
-                </div>
+                </div> */}
                 <div className="form-group">
                   <textarea
                     value={this.state.goal}
@@ -137,7 +102,7 @@ export class ArtistSignUp extends Component {
                     name="goal"
                     cols="50"
                     rows="5"
-                    placeholder="I'm selling 10% of all future publishing for $50 per share out of 100 shares"
+                    placeholder="Tell us about the you and your investment opportunity?"
                   />
                 </div>
                 <button

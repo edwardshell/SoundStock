@@ -47,7 +47,7 @@ class HomeContainer extends Component {
                 <CardDiv
                   key={artist._id}
                   name={artist.name}
-                  bio={artist.bio}
+                  goal={artist.goal}
                   src={artist.songLink}
                   img={artist.imageLink}
                   alt={artist.name}

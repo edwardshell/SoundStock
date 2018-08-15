@@ -78,7 +78,7 @@ export class CardDiv extends React.Component {
             </div>
             <div className="col-md-5">
               {/* added child to this so that we can assaign the this.props.summary that we get from db */}
-              <p>{this.props.bio}</p>
+              <p>{this.props.goal}</p>
             </div>
             <div className="col-md-5">
               <Music src={this.props.src} />
