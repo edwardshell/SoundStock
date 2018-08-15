@@ -12,7 +12,8 @@ export class ArtistSignUp extends Component {
     imageLink: "",
     songLink: "",
     bio: "",
-    goal: ""
+    goal: "",
+    investP: 0
   };
 
   handleInputChange = event => {
@@ -31,7 +32,8 @@ export class ArtistSignUp extends Component {
       imageLink: this.state.imageLink,
       songLink: this.state.songLink,
       bio: this.state.bio,
-      goal: this.state.goal
+      goal: this.state.goal,
+      investP: 0
     })
       .then(res => {
         console.log(res);

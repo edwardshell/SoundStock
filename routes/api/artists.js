@@ -10,6 +10,7 @@ router.route("/")
 router
   .route("/:id")
   .get(artistsController.findById)
+  .post(artistsController.update)
   .put(artistsController.update)
   .delete(artistsController.remove);
 
