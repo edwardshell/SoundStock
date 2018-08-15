@@ -10,7 +10,7 @@ const styles = {
     },
     controls: {
         position: "absolute",
-        top: "-270px",
+        top: "-267px",
         left: "-5px"
     }
 }
