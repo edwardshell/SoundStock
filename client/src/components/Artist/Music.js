@@ -21,7 +21,7 @@ const Music = props => (
         title="Song Link"
         width="400"
         height="250"
-        frameborder="0"
+        frameBorder="0"
         autohide="0"
         allowFullScreen
         src={props.src}
