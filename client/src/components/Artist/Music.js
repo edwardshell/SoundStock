@@ -19,8 +19,8 @@ const Music = props => (
     <div>
       <iframe
         title="Song Link"
-        width="300"
-        height="24"
+        width="400"
+        height="250"
         frameborder="0"
         autohide="0"
         allowFullScreen
